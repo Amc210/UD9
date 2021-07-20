@@ -30,7 +30,7 @@ public class Aula {
 
 		// contamos las asistencias
 		for (int i = 0; i < alumno.length; i++) {
-			if (alumno[i].isFalta()) {
+			if (alumno[i].isFalta() == true) {
 				cont++;
 			}
 		}
@@ -44,8 +44,9 @@ public class Aula {
 
 	public boolean Clase() {
 
-		//comprovamos si el profe esta si el aula y asignatura son la misma y si la asistencia es suficiente
-		if (profe.isFalta()) { 
+		// comprovamos si el profe esta si el aula y asignatura son la misma y si la
+		// asistencia es suficiente
+		if (profe.isFalta() == true) {
 			System.out.println("El profesor no esta");
 			return false;
 		} else if (!profe.getMateria().equalsIgnoreCase(materia)) {
@@ -54,7 +55,8 @@ public class Aula {
 		} else if (alumnosAsisten()) {
 			System.out.println("La asistencia es insuficiente");
 			return false;
-		}else{System.out.println("Se puede dar clase"); //En caso que todo sea correto mostrar el mensaje
+		} else {
+			System.out.println("Se puede dar clase"); // En caso que todo sea correto mostrar el mensaje
 			return true;
 		}
 	}
@@ -63,7 +65,7 @@ public class Aula {
 
 		int aprovados = 0;
 		int aprovadas = 0;
-		
+
 		System.out.println("Lista alumnos: ");
 		for (int i = 0; i < alumno.length; i++) {
 			// Comprobamos si el alumno esta aprobado

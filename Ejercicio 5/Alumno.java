@@ -4,20 +4,20 @@ public class Alumno extends Persona {
 	private int notaActual;
 
 	// constructor
-	public Alumno() {		
-		this.notaActual = (int) (Math.random() * (0 + 10));//generamos una nota al azar
-		super.setEdad((int) (Math.random() * (0 + 29)));//Generamos una edad al azar
+	public Alumno() {
+		this.notaActual = (int) (Math.random() * (0 + 10));// generamos una nota al azar
+		super.setEdad((int) (Math.random() * (0 + 29)));// Generamos una edad al azar
 	}
 
 	public boolean asistencia() {
 		Random rand = new Random();
 		boolean falta = false;
-		
-		// Genero un num random del 1 al 10
+
+		// Genero un num random del 1 al 10 si es mas grande de 5 falta
 		if ((int) (rand.nextDouble() * 10 + 1) > 5) {
 			falta = true;
 		}
-		
+
 		return falta;
 
 	}
@@ -35,6 +35,5 @@ public class Alumno extends Persona {
 	public String toString() {
 		return "Alumno [nombre = " + super.getNombre() + "/ notaActual = " + notaActual + "]";
 	}
-	
 
 }

@@ -14,16 +14,16 @@ public abstract class Persona {
 	// constructor
 	public Persona() {
 		int sexo;
-		sexo = (int) (Math.random() * (0 + 1));// generamos un numero aleatorio para el sexo
+		sexo = (int) (Math.random() * 2);// generamos un numero aleatorio para el sexo
 
 		// Comprovamos si es hombre o mujer con la constante creada
-		if (sexo == H) {
+		if (sexo == H) { //si sexo
 			nombre = NHOMBRE[(int) (Math.random() * NHOMBRE.length)];
-			sexo = 'H';
+			this.sexo = 'H';
 		}
 		if (sexo == M) {
 			nombre = NMUJER[(int) (Math.random() * NMUJER.length)];
-			sexo = 'M';
+			this.sexo = 'M';
 		}
 
 		asistencia(); // comprovamos la asistencia

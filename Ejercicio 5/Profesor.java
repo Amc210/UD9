@@ -1,34 +1,33 @@
 import java.util.Random;
 
-public class Profesor extends Persona{
+public class Profesor extends Persona {
 	private String materia;
-	public static final String[] MATERIAS = {"Matematicas", "Filosofia", "Fisica"};
-	     	
-	public Profesor() {		
-		this.materia = MATERIAS [(int) (Math.random() * (0 + 2))];
+	public static final String[] MATERIAS = { "Matematicas", "Filosofia", "Fisica" };
+
+	public Profesor() {
+		this.materia = MATERIAS[(int) (Math.random() * (0 + 2))];
 	}
 
 	public boolean asistencia() {
 		Random rand = new Random();
 		boolean falta = false;
-		
-		// Genero un num random del 1 al 10
-		if ((int) (rand.nextDouble() * 20 ) > 18) {
+
+		// Genero un num random del 1 al 20 si es mas grande de 18 falta
+		if ((int) (rand.nextDouble() * 20) > 18) {
 			falta = true;
 		}
-		
+
 		return falta;
 
 	}
 
-	
-	//toString
+	// toString
 	@Override
 	public String toString() {
 		return "Profesor [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", materia=" + materia + "]";
 	}
 
-	//gets y sets
+	// gets y sets
 	public String getNombre() {
 		return nombre;
 	}
@@ -60,7 +59,5 @@ public class Profesor extends Persona{
 	public void setMateria(String materia) {
 		this.materia = materia;
 	}
-	
-	
-	
+
 }
