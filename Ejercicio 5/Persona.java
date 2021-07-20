@@ -17,11 +17,11 @@ public abstract class Persona {
 		sexo = (int) (Math.random() * 2);// generamos un numero aleatorio para el sexo
 
 		// Comprovamos si es hombre o mujer con la constante creada
-		if (sexo == H) { //si sexo
+		if (sexo == H) { //si sexo es igual al valor de H generara un nombre aleatorio
 			nombre = NHOMBRE[(int) (Math.random() * NHOMBRE.length)];
 			this.sexo = 'H';
 		}
-		if (sexo == M) {
+		if (sexo == M) { //si sexo es igual al valor de H generara un nombre aleatorio
 			nombre = NMUJER[(int) (Math.random() * NMUJER.length)];
 			this.sexo = 'M';
 		}
